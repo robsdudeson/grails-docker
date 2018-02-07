@@ -15,13 +15,14 @@ RUN apt-get update \
 	software-properties-common \
 	zip \
 	unzip \
+	default-jdk \
 	&& rm -rf /var/lib/apt/lists/*
 
 ### OpenJDK 8 installation ###
-RUN add-apt-repository ppa:openjdk-r/ppa -y \
-	&& apt-get update \
-	&& apt-get install -y openjdk-8-jdk \
-	&& rm -rf /var/lib/apt/lists/*
+#RUN add-apt-repository ppa:openjdk-r/ppa -y \
+#	&& apt-get update \
+#	&& apt-get install -y openjdk-8-jdk \
+#	&& rm -rf /var/lib/apt/lists/*
 
 ### New user "develop" ###
 RUN useradd -p "" -ms /bin/bash developer
