@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM debian:testing
 MAINTAINER Vai de Grails! <contact@vaidegrails.com>
 
 ### Default Grails version ###
