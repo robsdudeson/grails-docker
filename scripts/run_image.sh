@@ -6,5 +6,5 @@ docker run -it -v ~/.m2:/home/developer/.m2 \
                -v ~/.ssh/:/home/developer/.ssh \
                -v ~/git/:/home/developer/git \
                -v ~/.git/:/home/developer/.git \
-               vaidegrails/grails:3.2.8 \
+               robsdudeson/grails:3.2.8 \
                /bin/bash

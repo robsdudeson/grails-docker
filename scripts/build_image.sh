@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-docker build -t vaidegrails/grails:3.2.8 .
+docker build -t robsdudeson/grails:3.2.8 .

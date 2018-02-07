@@ -1,5 +1,5 @@
 FROM alpine:3.5
-MAINTAINER Vai de Grails! <contact@vaidegrails.com>
+MAINTAINER robsdudeson <robsdudeson@gmail.com>
 
 ### Default Grails version ###
 ENV GRAILS_VERSION 3.2.8
