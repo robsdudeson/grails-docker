@@ -38,7 +38,7 @@ RUN /bin/bash -c "source $HOME/.sdkman/bin/sdkman-init.sh \
 	&& sdk install grails $GRAILS_VERSION"
 
 RUN /bin/bash -c "source $HOME/.sdkman/bin/sdkman-init.sh \
-	&& sdk install gradle 3.4.1"
+	&& sdk install gradle $GRADLE_VERSION"
 
 ### Expose port 8080 (embedded Tomcat) and 5005 (debug) ###
 EXPOSE 8080
