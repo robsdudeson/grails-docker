@@ -2,8 +2,8 @@ FROM debian:testing
 MAINTAINER robsdudeson <robsdudeson@gmail.com>
 
 ### Default Grails version ###
-ENV GRAILS_VERSION 3.2.8
-ENV GRADLE_VERSION 3.4.1
+ENV GRAILS_VERSION 3.3.2
+ENV GRADLE_VERSION 3.5
 
 ### Auxilary programs ###
 RUN apt-get update \
