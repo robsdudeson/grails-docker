@@ -24,10 +24,10 @@ pipeline {
   stages {
       stage('Build Images') {
         steps {
-        script{
-          appImg = docker.build('robsdudeson/grails:latest')
+          script{
+            appImg = docker.build('robsdudeson/grails:latest')
+          }
         }
-
       }
       stage('Publish Image To Registry'){
         steps {
