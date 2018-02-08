@@ -24,13 +24,27 @@ pipeline {
   stages {
       stage('Build Images') {
         steps {
-          sh './scripts/build_image.sh'
+        script{
+          appImg = docker.build('robsdudeson/grails:latest')
         }
 
       }
       stage('Publish Image To Registry'){
         steps {
-          sh 'echo nothing yet'
+          script{
+            docker.withRegistry('https://registry.hub.docker.com','hub.docker.com - credentials'){
+              appImg.push(env.BRANCH_NAME)
+
+              switch (env.BRANCH_NAME){
+                case "master":
+                  appImg.push('latest')
+                break
+                case "develop":
+                  appImg.push('latest-develop')
+                break
+              }
+            }
+          }
         }
       }
   }
