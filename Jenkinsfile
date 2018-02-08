@@ -25,7 +25,6 @@ pipeline {
       stage('Build Images') {
         steps {
           sh './scripts/build_image.sh'
-          sh './scripts/build_image_alpine.sh'
         }
 
       }
